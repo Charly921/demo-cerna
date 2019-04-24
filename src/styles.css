@@ -1,0 +1,93 @@
+:root {
+    --margin-first-page: 2em;
+    --margin-last-page: 2em;
+    --page-width: 21.59cm;
+    --page-height: 27.94cm;
+    --page-color: #FFFFFF;
+    --page-inner-width: calc(100% - 7mm - 7mm);
+    --page-inner-height: calc(100% - 1cm - 1cm);
+    --page-inner-margin: 7mm;
+    --page-inner-top: 1cm;
+    --font: 'Open Sans', sans-serif;
+    --font-size: 0.9em;
+    --background: #fafafa;
+    --text-color: #555;
+    --logo-width: 6.3cm;
+    --input-text-color: #555;
+    --border-color: #8d8d8d;
+  }
+  *,
+  *::after,
+  *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit; 
+  }
+  html { box-sizing: border-box; }
+  body {
+    font-family: var(--font);
+    background-color: var(--background);
+    font-size: var(--font-size);
+    color: var(--text-color);
+  }
+  @page {margin: 0;padding: 0;}
+  .page {
+    position: relative;
+    width: var(--page-width);
+    min-width: var(--page-width);
+    height: var(--page-height);
+    min-height: var(--page-height);
+    background: var(--page-color);
+    margin: 0 auto;
+    box-shadow: 1px 5px 15px #707070;
+  }
+  .page:first-of-type { margin-top: var(--margin-first-page); }
+  .page:last-of-type { margin-bottom: var(--margin-last-page); }
+  .page > .inner {
+    position: relative;
+    width: var(--page-inner-width);
+    height: var(--page-inner-height);
+    margin: 0 var(--page-inner-margin);
+    top: var(--page-inner-top);
+    overflow: hidden; 
+  }
+  @media print{
+  :root {
+      --margin-first-page: 2em;
+      --margin-last-page: 2em;
+      --page-width: 21.59cm;
+      --page-height: 27.94cm;
+      --page-color: #FFFFFF;
+      --page-inner-width: calc(100% - 7mm - 7mm);
+      --page-inner-height: calc(100% - 1cm - 1cm);
+      --page-inner-margin: 7mm;
+      --page-inner-top: 1cm;
+      --font: 'Open Sans', sans-serif;
+      --font-size: 0.9em;
+      --background: #fafafa;
+      --text-color: #4747A5;
+      --logo-width: 3.5cm;
+      --input-text-color: #555;
+      /*--primary-color: #BCDB68;*/
+      --border-color: #8d8d8d;
+    }
+    .no-print { display: none !important; }
+    nav {
+      display: none;
+     /* background-color: red;*/
+      height: 0;
+    }
+    .nav-bar {
+      display: none;
+     /* background-color: red;*/
+      height: 0;
+    }
+    * {
+      -webkit-print-color-adjust: exact;
+    }
+    .page { 
+      box-shadow: none; 
+    }
+    .page:first-of-type { margin-top: 0 !important; }
+    .page:last-of-type { margin-bottom: 0 !important; }
+  }
