@@ -5,16 +5,18 @@
       <div class="inner">
         <header class="header">
           <div class="logoa">
-            <img src="assets/rheinol.png" alt="">
+            <img src="assets/cerna.jpg" alt="">
           </div>
           <div class="titlea">
-            <h5 style="color: darkorange;">Francisco Matos Coronado No. 35</h5>
-            <h5 style="color: darkorange;">Col Buena Vista C.P. 58335 Morelia, Michoacán</h5>
-            <h5>Tel. 323-36-05 / Cel. 4431-44-74-36</h5>
-            <h5>E-mail: zauver.empresarial@gmail.com</h5>
+            <h3 style="color: #016fce;">Mantenimiento Fuel Injection por Computadora</h3>
+            <br>
+            <h5>Tel. 443 315-71-74 / Cel. 443 410-8753</h5>
+            <h5>E-mail: juancerna3@hotmail.com</h5>
           </div>
           <div class="logob">
-            <img src="assets/dogo1.png" style="width: 100%;">
+            <h5 style="border:none; text-align: right;">Punhuato # 91 Col. Lomas de Guayangareo Morelia, Michoacán</h5>
+            <br>
+            <!-- <img src="" style="width: 100%;"> -->
             <h5>No. Orden: <input type="number" autofocus  tabindex="0" class="focusNext" autocomplete="off"></h5>
           </div>
         </header>
@@ -67,7 +69,7 @@
             <div class="tr">
               <div class="td" style="width:60%; height: 100%; vertical-align:top;border-right: 1px solid #bbb;">
                 <div class="tr thead">
-                  <div class="td" style="height: 100%;">ASESOR</div>
+                  <div class="td" style="height: 100%; border-right:1px solid #016fce">ASESOR</div>
                 </div>
                 <div class="tr"><input type="text" style="width:12cm; height: 8mm;" tabindex="12" class="focusNext" autocomplete="off"></div>
               </div>
@@ -86,7 +88,7 @@
             </div>
           </div>
         </div>
-        <div class="sectionc">
+        <div class="sectionc" style="margin-top: 5mm;">
           <h5>SERVICIO REQUERIDO</h5>
           <div class="table" style="padding: 1mm;">
             <div class="tr">
@@ -152,7 +154,7 @@
                 <div class="tr">
                 <div class="table" id="_a">
                   <div class="tr">
-                    <div class="td" style="width:6cm; background:#4747A5; color:white; border-radius: 5px;"><span>No somos responsables de objetos olvidados en su auto y que no sean
+                    <div class="td" style="width:6cm; background:#016fce; color:white; border-radius: 5px;"><span>No somos responsables de objetos olvidados en su auto y que no sean
                         entregados a recepción.</span></div>
                     <div class="td" style="border:none;">
                       <span>SE ENTREGAN O REFACCIONES REEMPLAZADAS AL CONSUMIDOR</span><br>
@@ -163,12 +165,12 @@
                 </div>
                 </div>
                 <div class="tr">
-                  <div class="td" style="width:100%;border:none;">
+                  <div class="td" style="width:100%;border:none; padding-top: 3mm;">
                     <span>EN CASO DE QUE EL PRESUPUESTO NO SEA ACEPTADO, EL CONSUMIDOR PAGARÁ EXCLUSIVAMENTE EL COSTO
                       POR LA REVISIÓN Y DIAGNOSTICO. Y EL PRESTADOR DE SERVICIO SE OBLIGA A DEVOLVER EL VEHÍCULO EN
                       LAS CONDICIONES EN LAS QUE FUE ENTREGADO, EXCEPTUANDO LAS CONSECUENCIAS INEVITABLES DEL
                       DIAGNOSTICO.</span>
-                    <p>EL COSTO DE $ <input type="number" style="width:2cm; border-bottom: 1px dotted #bbb; font-size: 1.4em; text-align:center; font-weight: 600;" tabindex="63" class="focusNext" autocomplete="off"> M.N </p>
+                    <p style="padding-top: 3mm;">EL COSTO DE $ <input type="number" style="width:2cm; border-bottom: 1px dotted #bbb; font-size: 1.4em; text-align:center; font-weight: 600;" tabindex="63" class="focusNext" autocomplete="off"> M.N </p>
                   </div>
                 </div>
                 <div class="tr">
@@ -186,11 +188,16 @@
                       <p style="font-size: 1.5em;">ACEPTO</p>
                       <p style="font-size: 1.5em;">NO DEJO OBJETOS DE VALOR</p>
                     <div class="sign">
-                      <signature-pad [options]="signaturePadOptions"></signature-pad>
+                      <!-- <signature-pad [options]="signaturePadOptions"></signature-pad> -->
+                      <div class="signature">
+                          <div id="contSign" onclick = "btn_click()">
+                            <img src="" id="imgSign">
+                          </div>
+                      </div>
                       <hr>
                       <div >
-                        <a (click)="clearPad()" style="font-size: 1.5em;">FIRMA DEL CLIENTE</a>
-                        <p style="font-size: 1.1em;">Acepto el presupuesto y ordeno la ejecución de los trabajos a los que se refiere esta
+                        <a style="font-size: 1.5em;">FIRMA DEL CLIENTE</a>
+                        <p style="font-size: 1.3em; margin-top:2mm;">Acepto el presupuesto y ordeno la ejecución de los trabajos a los que se refiere esta
                           orden, manifiesto que estoy plenamente facultado para ello.</p>
                       </div>
                     </div>
@@ -203,7 +210,7 @@
                 <div class="table" id="tot_">
                   <div class="tr">
                     <div class="td"><span>REFACCIONES</span></div>
-                    <div class="td"><input type="number" value="{{totalRef}}" style="color:orange;"></div>
+                    <div class="td"><input type="number" value="{{totalRef}}" style="color:#016fce;"></div>
                   </div>
                   <div class="tr">
                     <div class="td"><span>MANO DE OBRA</span></div>
@@ -214,23 +221,23 @@
                     <div class="td"><input type="number"  name="otros" [(ngModel)]="otros" (change)="updt()" tabindex="60" class="focusNext" autocomplete="off"></div>
                   </div>
                   <div class="tr">
-                    <div class="td"><span>SUBTOTAL</span></div>
-                    <div class="td" ><input type="number" value="{{subtotal}}" style="color:orange;"></div>
+                    <div class="td"><span>SUBTOTAL $</span></div>
+                    <div class="td" ><input type="number" value="{{subtotal}}" style="color:#016fce;"></div>
                   </div>
                   <div class="tr">
-                    <div class="td" ><span>I.V.A</span></div>
-                    <div class="td"><input type="number" value="{{ iva}}" style="color:orange;"></div>
+                    <div class="td" ><span>I.V.A $</span></div>
+                    <div class="td"><input type="number" value="{{ iva}}" style="color:#016fce;"></div>
                   </div>
                   <div class="tr">
-                    <div class="td"><span>TOTAL</span></div>
+                    <div class="td"><span>TOTAL $</span></div>
                     <div class="td"><input type="number" value="{{total}}" style="color:red;"></div>
                   </div>
                   <div class="tr">
-                    <div class="td"><span>ANTICIPO</span></div>
+                    <div class="td"><span>ANTICIPO $</span></div>
                     <div class="td"><input type="number"  name="anticipo" [(ngModel)]="anticipo" (change)="updt()" tabindex="61" class="focusNext" autocomplete="off"></div>
                   </div>
                   <div class="tr">
-                    <div class="td"><span>SALDO</span></div>
+                    <div class="td"><span>SALDO $</span></div>
                     <div class="td"><input type="number" value="{{saldo}}" style="color:red;"></div>
                   </div>
                   <br>
@@ -264,9 +271,12 @@
             </div>
           </div>
         </section>
-
+        <div class="no-print" id="printBtn" onclick="window.print()">
+            <img src="assets/save.png" alt="" width="75" height="75">
+          </div>
       </div>
     </div>
+
   </section>
 
 <!-- </form> -->
@@ -286,7 +296,7 @@
                 <input type="file" accept="image/*" name="img1" onchange="showMyImage(this)">
               </div>
             </div>
-            <div class="td "><textarea name="img1d" id="txa"  rows="10" wrap="soft" tabindex="64" class="focusNext" autocomplete="off"></textarea></div>
+            <div class="td "><textarea name="img1d" id="txa"  rows="12" wrap="soft" tabindex="64" class="focusNext" autocomplete="off"></textarea></div>
           </div>
           <div class="tr">
             <div class="td">
@@ -294,7 +304,7 @@
                   <input type="file" accept="image/*" name="img2" onchange="showMyImage(this)">
                 </div>
             </div>
-            <div class="td "><textarea name="img2d" id="txa"  rows="10" wrap="soft" tabindex="65" class="focusNext" autocomplete="off"></textarea></div>
+            <div class="td "><textarea name="img2d" id="txa"  rows="12" wrap="soft" tabindex="65" class="focusNext" autocomplete="off"></textarea></div>
           </div>
           <div class="tr">
             <div class="td">
@@ -302,7 +312,7 @@
                   <input type="file" accept="image/*" name="img3" onchange="showMyImage(this)">
                 </div>
             </div>
-            <div class="td "><textarea name="img3d" id="txa"  rows="10" wrap="soft" tabindex="66" class="focusNext" autocomplete="off"></textarea></div>
+            <div class="td "><textarea name="img3d" id="txa"  rows="12" wrap="soft" tabindex="66" class="focusNext" autocomplete="off"></textarea></div>
           </div>
           <div class="tr">
             <div class="td ">
@@ -310,7 +320,7 @@
                   <input type="file" accept="image/*" name="img4" onchange="showMyImage(this)">
                 </div>
             </div>
-            <div class="td  "><textarea name="img4d" id="txa" rows="10" wrap="soft" tabindex="67" class="focusNext" autocomplete="off"></textarea></div>
+            <div class="td  "><textarea name="img4d" id="txa" rows="12" wrap="soft" tabindex="67" class="focusNext" autocomplete="off"></textarea></div>
           </div>
         </div>
       </div>
@@ -320,299 +330,5 @@
   </div>
 </section>
 
-<!-- <section>
-  <div class="page">
-    <div class="inner">
-      <header class="header">
-        <div class="logo">
-          <img src="assets/zauver1.jpg" alt="">
-        </div>
-        <div class="title ">
-          <h5>CENTRO DE MANTENIMIENTO AUTOMOTRIZ</h5>
-          <h5>Francisco Matos Coronado No. 35</h5>
-          <h5>Col Buena Vista C.P. 58335 Morelia, Michoacán</h5>
-          <h5>Tel. 323-36-05 / Cel. 4431-44-74-36</h5>
-        </div>
-        <div class="budget">
-          <img src="assets/bluechem.jpg" style="width:100%;">
-        </div>
-      </header>
-      <div class="section1">
-        <div class="table">
-          <div class="tr thead">
-            <div class="td" style="height: 8mm;">HOJA DE INSPECCIÓN</div>
-          </div>
-        </div>
-        <div class="table" style="margin-top: 3mm;">
-          <div class="tr">
-            <div class="td">AUTO</div>
-            <div class="td" style="padding-right: 2mm;"><input type="text" tabindex="68" class="focusNext" autocomplete="off"></div>
-            <div class="td" style="padding-left: 2mm;">MODELO</div>
-            <div class="td"><input type="text" tabindex="69" class="focusNext" autocomplete="off"></div>
-          </div>
-          <div class="tr">
-            <div class="td">MOTOR</div>
-            <div class="td" style="padding-right: 2mm;"><input type="text" tabindex="70" class="focusNext" autocomplete="off"></div>
-            <div class="td" style="padding-left: 2mm;">ACEITE</div>
-            <div class="td"><input type="text" tabindex="71" class="focusNext" autocomplete="off"></div>
-          </div>
-        </div>
-      </div>
-      <div class="section2">
-        <div class="table">
-          <div class="tr">
-            <div class="td" style="padding-left: 0; padding-right: 2mm; vertical-align: top;">
-              <div class="table">
-                <div class="tr thead">
-                  <div class="td" style="font-size:.95em;">SISTEMA DE MOTOR</div>
-                </div>
-              </div>
-              <div class="table t_">
-                <div class="tr">
-                  <div class="td">Niveles de líquido.</div>
-                  <div class="td"><input type="text" tabindex="72" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Mangueras.</div>
-                  <div class="td"><input type="text" tabindex="73" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Bandas.</div>
-                  <div class="td"><input type="text" tabindex="74" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Cuerpo de aceleración.</div>
-                  <div class="td"><input type="text" tabindex="75" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Sistema de inyección.</div>
-                  <div class="td"><input type="text" tabindex="76" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Ruidos en motor.</div>
-                  <div class="td"><input type="text" tabindex="77" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Fugas de líquido.</div>
-                  <div class="td"><input type="text" tabindex="78" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Soportes en general.</div>
-                  <div class="td"><input type="text" tabindex="79" class="focusNext" autocomplete="off"></div>
-                </div>
-              </div>
-              <div class="table" style="margin-top: 3mm;">
-                <div class="tr thead">
-                  <div class="td" style="font-size:.95em;">SISTEMA DE SUSPENSIÓN</div>
-                </div>
-              </div>
-              <div class="table t_">
-                <div class="tr">
-                  <div class="td">Amortiguadores delanteros.</div>
-                  <div class="td"><input type="text" tabindex="80" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Amortiguadores traseros.</div>
-                  <div class="td"><input type="text" tabindex="81" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Bujes.</div>
-                  <div class="td"><input type="text" tabindex="82" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Terminales de dirección.</div>
-                  <div class="td"><input type="text" tabindex="83" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Bieletas.</div>
-                  <div class="td"><input type="text" tabindex="84" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Bridas.</div>
-                  <div class="td"><input type="text" tabindex="85" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Horquillas.</div>
-                  <div class="td"><input type="text" tabindex="86" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Tornillos estabilizadores.</div>
-                  <div class="td"><input type="text" tabindex="87" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Gomas.</div>
-                  <div class="td"><input type="text" tabindex="88" class="focusNext" autocomplete="off"></div>
-                </div>
-              </div>
-              <div class="table" style="margin-top: 3mm;">
-                <div class="tr thead">
-                  <div class="td" style="font-size:.95em;">SISTEMA DE DIRECCIÓN</div>
-                </div>
-              </div>
-              <div class="table t_">
-                <div class="tr">
-                  <div class="td">Bomba de dirección.</div>
-                  <div class="td"><input type="text" tabindex="89" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Fugas de líquido.</div>
-                  <div class="td"><input type="text" tabindex="90" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Ruidos o Zumbido.</div>
-                  <div class="td"><input type="text" tabindex="91" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Caja de Dirección.</div>
-                  <div class="td"><input type="text" tabindex="92" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Mangueras de presión.</div>
-                  <div class="td"><input type="text" tabindex="93" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Aceite.</div>
-                  <div class="td"><input type="text" tabindex="94" class="focusNext" autocomplete="off"></div>
-                </div>
-              </div>
-            </div>
-            <div class="td" style="padding-left: 2mm; vertical-align: top;">
-              <div class="table">
-                <div class="tr thead">
-                  <div class="td" style="font-size:.95em;">SISTEMA ELÉCTRICO</div>
-                </div>
-              </div>
-              <div class="table t_">
-                <div class="tr">
-                  <div class="td">Batería.</div>
-                  <div class="td"><input type="text" tabindex="95" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Alternador.</div>
-                  <div class="td"><input type="text" tabindex="96" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Luces.</div>
-                  <div class="td"><input type="text" tabindex="97" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Terminales de batería.</div>
-                  <div class="td"><input type="text" tabindex="98" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Motor de arranque.</div>
-                  <div class="td"><input type="text" tabindex="99" class="focusNext" autocomplete="off"></div>
-                </div>
-              </div>
-              <div class="table" style="margin-top: 3mm;">
-                <div class="tr thead">
-                  <div class="td" style="font-size:.95em;">SISTEMA ELECTRÓNICO</div>
-                </div>
-              </div>
-              <div class="table t_">
-                <div class="tr">
-                  <div class="td">Check engine.</div>
-                  <div class="td"><input type="text" tabindex="100" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Codigos de avería.</div>
-                  <div class="td"><input type="text" tabindex="101" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">P. de próximo servicio.</div>
-                  <div class="td"><input type="text" tabindex="102" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Iconos del tablero.</div>
-                  <div class="td"><input type="text" tabindex="103" class="focusNext" autocomplete="off"></div>
-                </div>
-              </div>
-              <div class="table" style="margin-top: 3mm;">
-                <div class="tr thead">
-                  <div class="td" style="font-size:.95em;">SISTEMA DE ENFRIAMIENTO</div>
-                </div>
-              </div>
-              <div class="table t_">
-                <div class="tr">
-                  <div class="td">Temperatura.</div>
-                  <div class="td"><input type="text" tabindex="104" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Fugas.</div>
-                  <div class="td"><input type="text" tabindex="105" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Tipo de anticongelante.</div>
-                  <div class="td"><input type="text" tabindex="106" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Densidad.</div>
-                  <div class="td"><input type="text" tabindex="107" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Ventilador.</div>
-                  <div class="td"><input type="text" tabindex="108" class="focusNext" autocomplete="off"></div>
-                </div>
-              </div>
-              <div class="table" style="margin-top: 3mm;">
-                <div class="tr thead">
-                  <div class="td" style="font-size:.95em;">SISTEMA DE FRENOS</div>
-                </div>
-              </div>
-              <div class="table t_">
-                <div class="tr">
-                  <div class="td">Pastas delanteras.</div>
-                  <div class="td"><input type="text" tabindex="109" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Pastas traseras.</div>
-                  <div class="td"><input type="text" tabindex="110" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Discos delanteros.</div>
-                  <div class="td"><input type="text" tabindex="111" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Tambores.</div>
-                  <div class="td"><input type="text" tabindex="112" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Limpieza de ajuste.</div>
-                  <div class="td"><input type="text" tabindex="113" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Herrajes.</div>
-                  <div class="td"><input type="text" tabindex="114" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Mordazas.</div>
-                  <div class="td"><input type="text" tabindex="115" class="focusNext" autocomplete="off"></div>
-                </div>
-                <div class="tr">
-                  <div class="td">Fugas.</div>
-                  <div class="td"><input type="text" tabindex="116" class="focusNext" autocomplete="off"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section3">
-        <h5>OBSERVACIONES:</h5>
-        <textarea rows="4" tabindex="117" class="focusNext" autocomplete="off"></textarea>
-        <div class="table" style="margin-top: 2mm;">
-          <div class="tr">
-            <div class="td">TÉCNICO: </div>
-            <div class="td"><input type="text" tabindex="118" class="focusNext" autocomplete="off"></div>
-            <div class="td">FECHA: </div>
-            <div class="td"><input type="text" value={{fecha}}></div>
-          </div>
-        </div>
-      </div>
-      <div class="no-print" id="printBtn" onclick="window.print()">
-        <img src="assets/save.png" alt="" width="75" height="75">
-      </div>
-    </div>
-  </div>
-</section> -->
+
 </div>

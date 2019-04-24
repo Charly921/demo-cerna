@@ -15,11 +15,11 @@ header .logo img {
 }
 header .logoa{
   width: 7cm;
-  padding-top: 3mm;
+ /*  padding-top: 3mm; */
 }
 header .logoa img{
   position: relative;
-  height: 1.5cm;
+  height: 2cm;
 }
 header .titlea{
   position: relative;
@@ -39,8 +39,9 @@ header .logob input{
   border: none;
 }
 header .logob h5{
-  padding-left: 1cm;
+  margin-left: 1cm;
   border: 1px solid #bbb;
+  /* margin-top: 3mm; */
   border-radius: 2px;
 }
 header .title {
@@ -73,7 +74,7 @@ header .budget{
 }
  .table .tr.thead .td {
   padding: 5px 0;
-  background: #4747A5;
+  background: #016fce;
   color: white;
   font-weight: 600;
  /* font-size: 0.85em;*/
@@ -148,7 +149,7 @@ header .budget{
 .sectiona{
   border: 1px solid #bbb;
   border-radius: 2px;
-  margin: 2mm 0;
+  margin: 4mm 0;
   padding: 1mm;
   font-size: 0.8em;
 }
@@ -195,7 +196,7 @@ header .budget{
 .sectionc textarea{
   border: none;
   text-align: center;
-  font-size:1.7em;
+  font-size: 1.8em;
   font: var(--font);
   color: var(--text-color);
   padding: 0 2mm;
@@ -237,7 +238,7 @@ header .budget{
   transform: translate(-50%, -50%);
 }
 
-.sectiond {margin-top:2mm; margin-bottom: 1mm;}
+.sectiond {margin-top:5mm; margin-bottom: 1mm;}
 /*.sectiond .table {
   display: table;
   width: 100%;
@@ -253,7 +254,7 @@ header .budget{
 }*/
 .sectiond .tr {
   display: table-row;
-  height: 4mm;
+  height: 5mm;
   font-size: .8em;
 }
 .sectiond .tr input {
@@ -304,7 +305,7 @@ header .budget{
 }
 /*.sectiond #warranty #_a .td:nth-child(2) */
 .sectiond #main_table .td{
-  height: 3.5mm;
+  height: 4mm;
 
 }
 .sectiond #main_table input{
@@ -313,7 +314,7 @@ header .budget{
   color: var(--text-color);
 }
 .sectiond #warranty #tot_ .tr{
-  height: 3mm;
+  height: 3.5mm;
 }
 .sectiond #warranty #tot_ input{
   text-align: center;
@@ -379,37 +380,5 @@ font-weight: 700;
 text-align: center;
 margin-bottom: 2mm;
 }
-/*
-.sectiond #warranty .td:nth-child(1){
- width: 13.95cm;
-  border:0;
-  font-size: 0.9em;
-  color: #777;
-  padding-left: 4mm;
-  padding-right: 2.4cm;
-}
-.sectiond #warranty .td:nth-child(2){
-  width: 2.5cm;
-   border: 1px solid var(--text-color);
-   font-size: 0.9em;
-   color: #fff;
-   background: var(--text-color);
-   font-weight: 700;
-   text-align: center;
-   border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
- }
- .sectiond #warranty .td:nth-child(3){
-  border: 1px solid var(--text-color);
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
- }
-#warranty{
-  margin-top: 3mm;
-  border: 0;
-  margin-bottom: 5mm;
-}
-#warranty input{
-  font-weight: 700;
-  font-size: 1em;
-}*/
+
+

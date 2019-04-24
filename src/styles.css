@@ -1,93 +1,207 @@
 :root {
+  --margin-first-page: 2em;
+  --margin-last-page: 2em;
+  --page-width: 21.59cm;
+  --page-height: 27.94cm;
+  --page-color: #FFFFFF;
+  --page-inner-width: calc(100% - 7mm - 7mm);
+  --page-inner-height: calc(100% - 7mm - 7mm);
+  --page-inner-margin: 7mm;
+  --page-inner-top: 7mm;
+  --font: 'Poppins', sans-serif;
+  --font-size: 0.8em;
+  --background: #fafafa;
+  --text-color: #555;
+  --logo-width: 6.3cm;
+  --input-text-color: #555;
+  --border-color: #8d8d8d;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html { box-sizing: border-box; }
+body {
+  font-family: var(--font);
+  background-color: var(--background);
+  font-size: var(--font-size);
+  color: var(--text-color);
+}
+@page {margin: 0;padding: 0;}
+.page {
+  position: relative;
+  width: var(--page-width);
+  min-width: var(--page-width);
+  height: var(--page-height);
+  min-height: var(--page-height);
+  background: var(--page-color);
+  margin: 0 auto;
+  box-shadow: 1px 5px 15px #707070;
+}
+.page:first-of-type { margin-top: var(--margin-first-page); }
+.page:last-of-type { margin-bottom: var(--margin-last-page); }
+.page > .inner {
+  position: relative;
+  width: var(--page-inner-width);
+  height: var(--page-inner-height);
+  margin: 0 var(--page-inner-margin);
+  top: var(--page-inner-top);
+  overflow: hidden;
+}
+@media print{
+:root {
     --margin-first-page: 2em;
     --margin-last-page: 2em;
     --page-width: 21.59cm;
     --page-height: 27.94cm;
     --page-color: #FFFFFF;
     --page-inner-width: calc(100% - 7mm - 7mm);
-    --page-inner-height: calc(100% - 1cm - 1cm);
+    --page-inner-height: calc(100% - 7mm - 7mm);
     --page-inner-margin: 7mm;
-    --page-inner-top: 1cm;
-    --font: 'Open Sans', sans-serif;
-    --font-size: 0.9em;
+    --page-inner-top: 7mm;
+    --font: 'Poppins', sans-serif;
+    --font-size: 0.8em;
     --background: #fafafa;
     --text-color: #555;
-    --logo-width: 6.3cm;
+    --logo-width: 3.5cm;
     --input-text-color: #555;
+    /*--primary-color: #BCDB68;*/
     --border-color: #8d8d8d;
   }
-  *,
-  *::after,
-  *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit; 
+  .no-print { display: none !important; }
+  nav {
+    display: none;
+   /* background-color: red;*/
+    height: 0;
   }
-  html { box-sizing: border-box; }
-  body {
-    font-family: var(--font);
-    background-color: var(--background);
-    font-size: var(--font-size);
-    color: var(--text-color);
+  .nav-bar {
+    display: none;
+   /* background-color: red;*/
+    height: 0;
   }
-  @page {margin: 0;padding: 0;}
+  * {
+    -webkit-print-color-adjust: exact;
+  }
   .page {
-    position: relative;
-    width: var(--page-width);
-    min-width: var(--page-width);
-    height: var(--page-height);
-    min-height: var(--page-height);
-    background: var(--page-color);
-    margin: 0 auto;
-    box-shadow: 1px 5px 15px #707070;
+    box-shadow: none;
   }
-  .page:first-of-type { margin-top: var(--margin-first-page); }
-  .page:last-of-type { margin-bottom: var(--margin-last-page); }
-  .page > .inner {
-    position: relative;
-    width: var(--page-inner-width);
-    height: var(--page-inner-height);
-    margin: 0 var(--page-inner-margin);
-    top: var(--page-inner-top);
-    overflow: hidden; 
-  }
-  @media print{
-  :root {
-      --margin-first-page: 2em;
-      --margin-last-page: 2em;
-      --page-width: 21.59cm;
-      --page-height: 27.94cm;
-      --page-color: #FFFFFF;
-      --page-inner-width: calc(100% - 7mm - 7mm);
-      --page-inner-height: calc(100% - 1cm - 1cm);
-      --page-inner-margin: 7mm;
-      --page-inner-top: 1cm;
-      --font: 'Open Sans', sans-serif;
-      --font-size: 0.9em;
-      --background: #fafafa;
-      --text-color: #4747A5;
-      --logo-width: 3.5cm;
-      --input-text-color: #555;
-      /*--primary-color: #BCDB68;*/
-      --border-color: #8d8d8d;
-    }
-    .no-print { display: none !important; }
-    nav {
-      display: none;
-     /* background-color: red;*/
-      height: 0;
-    }
-    .nav-bar {
-      display: none;
-     /* background-color: red;*/
-      height: 0;
-    }
-    * {
-      -webkit-print-color-adjust: exact;
-    }
-    .page { 
-      box-shadow: none; 
-    }
-    .page:first-of-type { margin-top: 0 !important; }
-    .page:last-of-type { margin-bottom: 0 !important; }
-  }
+  .page:first-of-type { margin-top: 0 !important; }
+  .page:last-of-type { margin-bottom: 0 !important; }
+}
+
+input[type=checkbox], input[type=radio] {
+  border: 1px solid #016fce;
+ /* padding: 0.5em;*/
+ padding: 0.4em;
+ max-width: 3mm;
+  -webkit-appearance: none;
+  margin-left: 4mm;
+  margin-top: 1mm;
+}
+input[type=checkbox]:checked ,input[type=radio]:checked{
+  background: #016fce;
+ /* background-size: 6px 8px;**/
+}
+
+input[type=checkbox]:focus,input[type=radio]:focus {
+  outline-color: transparent;
+}
+
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: #F6F6F6;
+  border-radius: 25px;
+  box-shadow: 0 0 0 1px #f6f6f6;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0 0 2px #B2B2B2;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #F6F6F6;
+
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  background: #F6F6F6;
+  border-radius: 25px;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0 0 2px #B2B2B2;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #F6F6F6;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #F6F6F6;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+  height: 30px;
+  width: 30px;
+  top: 5px;
+  position: relative;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 2px #B2B2B2;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #F6F6F6;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #F6F6F6;
+}
+.gauge_{
+  margin-top: 1mm;
+  margin-left: 5mm;
+  width: 150px;
+}
+.sign{
+  align-content: center;
+  margin-left: 13mm;
+  width: 270px;
+}
+
